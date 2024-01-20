@@ -19,13 +19,29 @@ function addToHaveArray() {
   message.value = ''
   name.value = ''
 }
+function moveFromNeedToHave(dataToMove){
+  console.log(dataToMove)
+  have.value.push(...dataToMove)
+  console.log(have.value)
+  const remove = need.value.filter( foodItem => !dataToMove.includes(foodItem))
+  console.log(remove)
+  need.value = remove
+}
+function moveFromHaveToNeed(dataToMove){
+  console.log(dataToMove)
+  need.value.push(...dataToMove)
+  console.log(need.value)
+  const remove = have.value.filter( foodItem => !dataToMove.includes(foodItem))
+  console.log(remove)
+  have.value = remove
+}
 </script>
 
 <template>
   <h1>Christmas Dinner!</h1>
 
-  <List :itemList="have" listTitle="have"/>
-  <List :itemList="need" listTitle="need"/>
+  <List :itemList="have" listTitle="have" @moveItemsButtonClicked="moveFromHaveToNeed"/>
+  <List :itemList="need" listTitle="need" @moveItemsButtonClicked="moveFromNeedToHave"/>
   <div>
     <input v-model="message" placeholder="Add Item..." />
     <input v-model="name" placeholder="Your Name.." />
