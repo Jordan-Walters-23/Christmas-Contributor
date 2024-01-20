@@ -1,3 +1,13 @@
+Created Lists 
+Add new item function
+Add names to Item objects
+Transfer items from one List to another
+
+
+
+
+
+
 # christmas-vue
 
 This template should help get you started developing with Vue 3 in Vite.
