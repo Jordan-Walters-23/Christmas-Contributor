@@ -2,18 +2,27 @@
   import {ref} from 'vue' 
   const have = ref([{item: 'turkey'}, {item: 'carrots'}])
   const need = ref([{item: 'gravy' }])
-
+  const message = ref('')
+  function addToHaveArray() { 
+    console.log(have)
+    console.log(have.value)
+    have.value.push({item: message.value})
+  }
 </script>
 
 <template>
   <h1>Christmas Dinner! </h1>
   <div>
     <h2>What we have</h2>
-    <li v-for="item in have">{{ item  }}</li>
+    <li v-for="item in have">{{ item.item  }}</li>
   </div>
   <div>
     <h2>What we need</h2>
-    <li v-for="item in need">{{  item }}</li>
+    <li v-for="item in need">{{  item.item }}</li>
+  </div>
+  <div>
+    <input v-model="message" placeholder="edit me" />
+    <button @click="addToHaveArray">Add Item</button>
   </div>
 </template>
 
