@@ -9,7 +9,7 @@ const have = ref([
 
   { item: 'carrots', name: 'Jordan' }
 ])
-const need = ref([{ item: 'gravy', name: 'Matt'}, { item: 'gravy', name: 'Matt'}])
+const need = ref([{ item: 'gravy', name: 'Matt'}, { item: 'pies', name: 'Nat'}])
 const message = ref('')
 const name = ref('')
 function addToHaveArray() {
@@ -23,6 +23,7 @@ function addToHaveArray() {
 
 <template>
   <h1>Christmas Dinner!</h1>
+
   <List :itemList="have" listTitle="have"/>
   <List :itemList="need" listTitle="need"/>
   <div>

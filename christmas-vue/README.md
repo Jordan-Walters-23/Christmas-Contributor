@@ -1,7 +1,7 @@
-Created Lists 
-Add new item function
-Add names to Item objects
-Transfer items from one List to another
+1. Created Lists 
+2. Add new item function
+3. Add names to Item objects
+4. Transfer items from one List to another
 
 
 
