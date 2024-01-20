@@ -1,18 +1,19 @@
 <script setup>
-defineProps({
-  msg: {
-    type: String,
-    required: true
-  }
-})
+  import {ref} from 'vue' 
+  const have = ref([{item: 'turkey'}, {item: 'carrots'}])
+  const need = ref([{item: 'gravy' }])
+
 </script>
 
 <template>
+  <h1>Christmas Dinner! </h1>
   <div>
-    <h1></h1>
-    <h3>
-      Christmas Dinner
-    </h3>
+    <h2>What we have</h2>
+    <li v-for="item in have">{{ item  }}</li>
+  </div>
+  <div>
+    <h2>What we need</h2>
+    <li v-for="item in need">{{  item }}</li>
   </div>
 </template>
 
