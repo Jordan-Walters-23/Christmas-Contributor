@@ -1,5 +1,6 @@
 <script setup>
-  import {ref} from 'vue' 
+  import {ref} from 'vue'
+  import List from './List.vue'
   const have = ref([{item: 'turkey'}, {item: 'carrots'}])
   const need = ref([{item: 'gravy' }])
   const message = ref('')
@@ -13,14 +14,8 @@
 
 <template>
   <h1>Christmas Dinner! </h1>
-  <div>
-    <h2>What we have</h2>
-    <li v-for="item in have">{{ item.item  }}</li>
-  </div>
-  <div>
-    <h2>What we need</h2>
-    <li v-for="item in need">{{  item.item }}</li>
-  </div>
+  <List :itemList="have"/>
+  <List :itemList="need"/>
   <div>
     <input v-model="message" placeholder="Add Item..." />
     <button @click="addToHaveArray">Add Item</button>
