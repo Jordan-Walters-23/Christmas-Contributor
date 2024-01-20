@@ -12,6 +12,6 @@ const moveItem = ref([])
       {{ foodItem.item }} - {{ foodItem.name
       }}<input type="checkbox" :value="foodItem" v-model="moveItem" />
     </li>
-    <button @click="emmits('moveItemsButtonClicked', moveItem)">Move to {{ listTitle }} Item</button>
+    <button @click="emmits('moveItemsButtonClicked', moveItem);moveItem=[]">Move to {{ listTitle }} Item</button>
   </div>
 </template>
