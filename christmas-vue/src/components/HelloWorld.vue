@@ -7,6 +7,7 @@
     console.log(have)
     console.log(have.value)
     have.value.push({item: message.value})
+    message.value= ""
   }
 </script>
 
@@ -21,7 +22,7 @@
     <li v-for="item in need">{{  item.item }}</li>
   </div>
   <div>
-    <input v-model="message" placeholder="edit me" />
+    <input v-model="message" placeholder="Add Item..." />
     <button @click="addToHaveArray">Add Item</button>
   </div>
 </template>
