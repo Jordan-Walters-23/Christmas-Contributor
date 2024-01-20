@@ -23,8 +23,8 @@ function addToHaveArray() {
 
 <template>
   <h1>Christmas Dinner!</h1>
-  <List :itemList="have" />
-  <List :itemList="need" />
+  <List :itemList="have" listTitle="have"/>
+  <List :itemList="need" listTitle="need"/>
   <div>
     <input v-model="message" placeholder="Add Item..." />
     <input v-model="name" placeholder="Your Name.." />
