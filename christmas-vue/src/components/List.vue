@@ -6,6 +6,6 @@
 <template>
 <div>
     <h2>What we have</h2>
-    <li v-for="(item, index) in itemList" :key=index>{{ item.item }}</li>
+    <li v-for="(foodItem, index) in itemList" :key=index>{{ foodItem.item }} - {{ foodItem.name  }}</li>
   </div>
 </template>
